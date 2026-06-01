@@ -222,21 +222,22 @@ window.addEventListener("load", () => {
 // EMAILJS
 // =========================
 
-emailjs.init("davkC4o-L1ldDRIT2");
 
-const contactForm = document.getElementById("contact-form");
+const contactForm =
+  document.getElementById("contact-form");
 
 contactForm.addEventListener("submit", function (e) {
 
   e.preventDefault();
 
-  const submitBtn = contactForm.querySelector("button");
+  const submitBtn =
+    contactForm.querySelector("button");
 
   submitBtn.textContent = "Sending...";
 
   emailjs.send(
-    "service_k40jiin",
-    "template_2e1j5c5",
+    "YOUR_SERVICE_ID",
+    "YOUR_TEMPLATE_ID",
     {
       from_name: this[0].value,
       from_email: this[1].value,
@@ -246,7 +247,7 @@ contactForm.addEventListener("submit", function (e) {
 
   .then(() => {
 
-    submitBtn.textContent = "Message Sent ✓";
+    submitBtn.textContent = "Message Sent";
 
     alert("Message sent successfully!");
 
@@ -254,9 +255,7 @@ contactForm.addEventListener("submit", function (e) {
 
   })
 
-  .catch((error) => {
-
-    console.log(error);
+  .catch(() => {
 
     submitBtn.textContent = "Send Message";
 
@@ -265,6 +264,7 @@ contactForm.addEventListener("submit", function (e) {
   });
 
 });
+
 // =========================
 // SCROLL PROGRESS BAR
 // =========================

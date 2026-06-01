@@ -1339,20 +1339,3 @@ section{
     gap:15px;
   }
 }
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-
-.logo img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-.logo span {
-  font-weight: 700;
-}
